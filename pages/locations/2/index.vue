@@ -14,6 +14,7 @@
       </div>
 
       <UButton
+        @click="onClickMap"
         size="xl"
         variant="outline"
         color="black"
@@ -26,8 +27,17 @@
     </main>
 
     <footer class="flex justify-center p-8">
-      <UButton size="xl" :to="{ name: 'locations-2-description' }">我到了</UButton>
+      <UButton @click="onClickArrive" size="xl" :to="{ name: 'locations-2-description' }">我到了</UButton>
     </footer>
 
   </div>
 </template>
+<script setup lang="ts">
+function onClickMap() {
+  useTrackEvent('OpenMapLocation3')
+}
+
+function onClickArrive() {
+  useTrackEvent('ArriveLocation3')
+}
+</script>

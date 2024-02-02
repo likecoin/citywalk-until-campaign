@@ -15,8 +15,13 @@
     <footer class="flex justify-between p-8">
       <PurchaseButton />
 
-      <UButton size="xl" :to="{ name: 'locations-2' }">繼續</UButton>
+      <UButton @click="onClickContinue" size="xl" :to="{ name: 'locations-2' }">繼續</UButton>
     </footer>
 
   </div>
 </template>
+<script setup lang="ts">
+function onClickContinue() {
+  useTrackEvent('CompleteLocation1')
+}
+</script>
