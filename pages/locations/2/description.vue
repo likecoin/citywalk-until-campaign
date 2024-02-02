@@ -14,7 +14,7 @@
     </main>
 
     <footer class="flex justify-between p-8">
-      <PurchaseButton />
+      <PurchaseButton from="Location2" />
 
       <UButton @click="onClickContinue" size="xl" :to="{ name: 'locations-3' }">繼續</UButton>
     </footer>
