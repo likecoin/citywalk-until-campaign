@@ -8,7 +8,15 @@
   >購買《散步學》</UButton>
 </template>
 <script setup lang="ts">
+
+const props = defineProps({
+  from: {
+    type: String,
+    default: '',
+  }
+})
+
 function onClickPurchase() {
-  useTrackEvent('clickPurchaseButton')
+  useTrackEvent(`clickPurchaseButton${props.from || ''}`)
 }
 </script>

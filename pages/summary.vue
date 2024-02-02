@@ -15,7 +15,7 @@
     <footer class="flex flex-col items-center p-8 pt-0 gap-4">
       <img class="w-[128px]" src="~assets/images/book.webp" />
 
-      <PurchaseButton />
+      <PurchaseButton from="Summary" />
 
       <UButton @click="onClickShare" size="xl" :to="{ name: 'share' }">分享</UButton>
     </footer>
