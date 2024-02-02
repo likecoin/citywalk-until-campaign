@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col items-stretch h-full">
+  <main>
 
     <header class="p-4 py-8 bg-[#ABAB8A] text-center text-white">
       <h1 class="font-bold text-2xl">前言</h1>

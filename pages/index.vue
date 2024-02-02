@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col items-stretch h-full">
+  <main>
 
     <div class="flex flex-col justify-center items-stretch grow py-8 overflow-hidden">
   

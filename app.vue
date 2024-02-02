@@ -1,7 +1,7 @@
 <template>
   <div class="fixed inset-0 black text-lime-900 font-serif">
-    <div class="w-full h-full max-w-[768px] mx-auto bg-[#fef2e9] overflow-y-auto">
-      <NuxtPage />
+    <div class="flex flex-col w-full h-full max-w-[768px] mx-auto bg-[#fef2e9] overflow-y-auto">
+      <NuxtPage class="flex flex-col items-stretch grow" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-stretch h-full">
+  <div>
 
     <header class="p-4 py-8 bg-[#ABAB8A] text-center text-white">
       <h1 class="font-bold text-2xl">地點 1 - 自然</h1>

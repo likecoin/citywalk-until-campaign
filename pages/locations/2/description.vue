@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-stretch h-full bg-[#ABAB8A] text-white">
+  <div class="bg-[#ABAB8A] text-white">
 
     <main class="flex flex-col justify-center grow gap-4 p-8 text-left">
 
