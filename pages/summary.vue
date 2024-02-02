@@ -14,7 +14,8 @@
 
     <footer class="flex flex-col items-center p-8 gap-10">
       <PurchaseButton />
-      <UButton size="xl" variant="soft" :to="{ name: 'share' }">分享</UButton>
+
+      <UButton size="xl" :to="{ name: 'share' }">分享</UButton>
     </footer>
 
   </div>
