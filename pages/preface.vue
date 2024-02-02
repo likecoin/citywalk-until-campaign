@@ -13,8 +13,13 @@
     </div>
 
     <footer class="flex justify-center p-8">
-      <UButton size="xl" :to="{ name: 'locations-1' }">開始</UButton>
+      <UButton @click="onClickStart" size="xl" :to="{ name: 'locations-1' }">開始</UButton>
     </footer>
 
   </main>
 </template>
+<script setup lang="ts">
+function onClickStart() {
+  useTrackEvent('LeavePreface')
+}
+</script>

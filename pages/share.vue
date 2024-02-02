@@ -11,8 +11,13 @@
     </main>
 
     <footer class="flex flex-col items-center p-8">
-      <UButton size="xl" :to="{ name: 'index' }">重新開始</UButton>
+      <UButton @click="onClickRestart" size="xl" :to="{ name: 'index' }">重新開始</UButton>
     </footer>
 
   </div>
 </template>
+<script setup lang="ts">
+function onClickRestart() {
+  useTrackEvent('RestartFromShare')
+}
+</script>

@@ -17,8 +17,13 @@
 
       <PurchaseButton />
 
-      <UButton size="xl" :to="{ name: 'share' }">分享</UButton>
+      <UButton @click="onClickShare" size="xl" :to="{ name: 'share' }">分享</UButton>
     </footer>
 
   </div>
 </template>
+<script setup lang="ts">
+function onClickShare() {
+  useTrackEvent('GoToShare')
+}
+</script>

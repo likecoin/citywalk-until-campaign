@@ -21,8 +21,13 @@
     </div>
 
     <footer class="flex justify-center p-8 relative bg-[#AE7546]">
-      <UButton size="xl" :to="{ name: 'preface' }">進入</UButton>
+      <UButton @click="onClickStart" size="xl" :to="{ name: 'preface' }">進入</UButton>
     </footer>
 
   </main>
 </template>
+<script setup lang="ts">
+function onClickStart() {
+  useTrackEvent('ClickStart')
+}
+</script>
