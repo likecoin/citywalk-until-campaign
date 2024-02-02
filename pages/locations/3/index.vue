@@ -32,6 +32,7 @@
 
   </div>
 </template>
+
 <script setup lang="ts">
 function onClickMap() {
   useTrackEvent('OpenMapLocation3')

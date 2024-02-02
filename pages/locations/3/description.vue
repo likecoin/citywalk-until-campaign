@@ -21,6 +21,7 @@
 
   </div>
 </template>
+
 <script setup lang="ts">
 function onClickContinue() {
   useTrackEvent('CompleteLocation3')

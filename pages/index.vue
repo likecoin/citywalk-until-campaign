@@ -26,6 +26,7 @@
 
   </main>
 </template>
+
 <script setup lang="ts">
 function onClickStart() {
   useTrackEvent('ClickStart')

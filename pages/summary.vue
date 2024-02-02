@@ -22,6 +22,7 @@
 
   </div>
 </template>
+
 <script setup lang="ts">
 function onClickShare() {
   useTrackEvent('GoToShare')
