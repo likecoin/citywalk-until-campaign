@@ -4,6 +4,9 @@ export default defineAppConfig({
     gray: 'cool',
     button: {
       font: 'font-bold',
-    }
+      variant: {
+        link: 'underline',
+      },
+    },
   },
 })
