@@ -1,8 +1,8 @@
 <template>
-  <div class="max-w-[768px] mx-auto h-screen black text-lime-900 font-serif">
-    <NuxtLayout>
+  <div class="fixed inset-0 black text-lime-900 font-serif">
+    <div class="w-full h-full max-w-[768px] mx-auto bg-[#fef2e9] overflow-y-auto">
       <NuxtPage />
-    </NuxtLayout>
+    </div>
   </div>
 </template>
 
