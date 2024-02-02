@@ -5,20 +5,39 @@
 
       <p class="mb-8 text-xl">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 
-      <p class="text-xl font-mono">
-        <a @click="onClickIgPage('LikerLand')" href="https://www.instagram.com/liker.land/" target="_blank"
-          rel="noopener">@liker.land</a>
-        <a @click="onClickIgPage('UntilCoffee')" href="https://www.instagram.com/until_coffee/" target="_blank"
-          rel="noopener">@until_coffee</a>
-      </p>
-      <p class="text-xl font-mono">
-        <a @click="onClickIgTag('Coffeecitywalk')" href="https://www.instagram.com/explore/tags/咖啡散步學/" target="_blank"
-          rel="noopener">#咖啡散步學</a>
-        <a @click="onClickIgTag('Urbanstrollology')" href="https://www.instagram.com/explore/tags/urbanstrollology/"
-          target="_blank" rel="noopener">#urbanstrollology</a>
-        <a @click="onClickIgTag('Likerland')" href="https://www.instagram.com/explore/tags/likerland/" target="_blank"
-          rel="noopener">#likerland</a>
-      </p>
+      <ul class="font-mono">
+        <li v-for="(id, index) in igAccounts" :key="id" class="inline">
+          <template v-if="index > 0">&nbsp;</template>
+          <UButton
+            :label="`@${id}`"
+            :to="`https://www.instagram.com/${id}`"
+            target="_blank"
+            rel="noopener"
+            variant="link"
+            size="xl"
+            :padded="false"
+            color="white"
+            @click="onClickIgAccount(id)"
+          />
+        </li>
+      </ul>
+
+      <ul class="font-mono">
+        <li v-for="(tag, index) in igTags" :key="tag" class="inline">
+          <template v-if="index > 0">&nbsp;</template>
+          <UButton
+            :label="`#${tag}`"
+            :to="`https://www.instagram.com/explore/tags/${tag}`"
+            target="_blank"
+            rel="noopener"
+            variant="link"
+            size="xl"
+            :padded="false"
+            color="white"
+            @click="onClickIgTag(tag)"
+          />
+        </li>
+      </ul>
 
     </main>
 
@@ -29,8 +48,11 @@
   </div>
 </template>
 <script setup lang="ts">
-function onClickIgPage(page: string) {
-  useTrackEvent(`ClickIgPage$${page}`)
+const igAccounts = ['liker.land', 'until_coffee']
+const igTags = ['咖啡散步學', 'urbanstrollology', 'likerland']
+
+function onClickIgAccount(id: string) {
+  useTrackEvent(`ClickIgAccount${id}`)
 }
 
 function onClickIgTag(tag: string) {
