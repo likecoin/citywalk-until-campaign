@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#ABAB8A] text-white">
 
-    <main class="flex flex-col justify-center grow gap-4 p-8 text-left">
+    <main class="flex flex-col justify-center items-start grow gap-4 p-8 text-left">
 
       <p class="mb-8 text-xl">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 
@@ -39,6 +39,13 @@
         </li>
       </ul>
 
+      <UButton
+        label="複製"
+        variant="outline"
+        color="white"
+        @click="onClickCopy"
+      />
+
     </main>
 
     <footer class="flex flex-col items-center p-8">
@@ -52,12 +59,24 @@
 const igAccounts = ['liker.land', 'until_coffee']
 const igTags = ['咖啡散步學', 'urbanstrollology', 'likerland']
 
+const toast = useToast()
+
 function onClickIgAccount(id: string) {
   useTrackEvent(`ClickIgAccount${id}`)
 }
 
 function onClickIgTag(tag: string) {
   useTrackEvent(`ClickIgTag${tag}`)
+}
+
+function onClickCopy() {
+  useTrackEvent('CopyShare')
+  try {
+    navigator.clipboard.writeText(`${igAccounts.map(id => `@${id}`).join(' ')} ${igTags.map(tag => `#${tag}`).join(' ')}`)
+    toast.add({ title: '已複製！' })
+  } catch {
+    toast.add({ title: '複製失敗' })
+  }
 }
 
 function onClickRestart() {
