@@ -6,9 +6,9 @@
       <p class="mb-8 text-xl">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 
       <p class="text-xl font-mono">
-        <a @click="onClickIGPage('LikerLand')" href="https://www.instagram.com/liker.land/" target="_blank"
+        <a @click="onClickIgPage('LikerLand')" href="https://www.instagram.com/liker.land/" target="_blank"
           rel="noopener">@liker.land</a>
-        <a @click="onClickIGPage('UntilCoffee')" href="https://www.instagram.com/until_coffee/" target="_blank"
+        <a @click="onClickIgPage('UntilCoffee')" href="https://www.instagram.com/until_coffee/" target="_blank"
           rel="noopener">@until_coffee</a>
       </p>
       <p class="text-xl font-mono">
@@ -29,12 +29,12 @@
   </div>
 </template>
 <script setup lang="ts">
-function onClickIGPage(page: string) {
-  useTrackEvent('ClickIGPage')
+function onClickIgPage(page: string) {
+  useTrackEvent(`ClickIgPage$${page}`)
 }
 
-function onClickIGTag(tag: string) {
-  useTrackEvent('ClickIGTag')
+function onClickIgTag(tag: string) {
+  useTrackEvent(`ClickIgTag${tag}`)
 }
 
 function onClickRestart() {
