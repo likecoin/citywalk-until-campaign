@@ -1,9 +1,9 @@
 <template>
   <div class="bg-[#ABAB8A] text-white">
 
-    <main class="flex flex-col justify-center grow gap-4 p-8 text-left">
+    <main class="flex flex-col justify-center items-center grow gap-4 p-8 text-left">
 
-      <h1 class="mb-4 font-cursive text-5xl">散步是認真的事</h1>
+      <h1 class="mb-4 font-cursive text-5xl text-center">散步是認真的事</h1>
 
       <p class="text-xl font-bold text-center font-serif">建築．路徑．空間</p>
       <p class="text-xl font-bold text-center font-serif">物件．信息．自然</p>
