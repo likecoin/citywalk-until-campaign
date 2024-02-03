@@ -15,5 +15,5 @@ export default defineNuxtConfig({
     preference: 'dark',
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', 'nuxt-gtag'],
+  modules: ['@nuxt/ui', 'nuxt-gtag', '@hypernym/nuxt-gsap'],
 })
