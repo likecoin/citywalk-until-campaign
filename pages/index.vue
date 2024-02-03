@@ -56,7 +56,8 @@
       </div>
     </div>
       
-    <footer class="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end p-8 min-h-[20vh] bg-gradient-to-t from-[#fef2e9]">
+    <footer class="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end gap-4 p-8 min-h-[20vh] bg-gradient-to-t from-[#fef2e9] from-75%">
+      <div class="text-3xl text-center font-cursive tracking-widest">喝一杯咖啡<br>給自己散步的空檔</div>
       <UButton @click="onClickStart" size="xl" :to="{ name: 'preface' }">進入</UButton>
     </footer>
 
@@ -118,7 +119,7 @@ function animateSplash() {
   }, 'dashed-lines+=1')
 
   tl.from('footer', {
-    duration: 2,
+    duration: 5,
     opacity: 0,
     top: '100%',
     ease: 'power2.out',

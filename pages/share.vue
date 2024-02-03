@@ -3,7 +3,7 @@
 
     <main class="flex flex-col justify-center items-start grow gap-4 p-8 text-left">
 
-      <p class="mb-8 text-xl">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
+      <p class="mb-8 text-4xl font-cursive">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 
       <ul class="font-mono">
         <li v-for="(id, index) in igAccounts" :key="id" class="inline">

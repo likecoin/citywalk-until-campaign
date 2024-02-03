@@ -1,11 +1,13 @@
 <template>
   <div>
 
-    <header class="p-4 py-8 bg-[#ABAB8A] text-center text-white">
-      <h1 class="font-bold text-2xl">地點 3 - 空間</h1>
+    <header class="p-8 bg-[#ABAB8A] text-center text-white">
+      <h1 class="flex justify-between tracking-widest">
+        <span class="text-2xl font-cursive">地點 3</span><span class="text-3xl font-bold font-serif">空間</span>
+      </h1>
     </header>
 
-    <main class="flex flex-col justify-center items-center text-left grow gap-4 p-8">
+    <main class="flex flex-col justify-center items-center text-left grow gap-4 p-8 pb-0">
       <img class="rounded-2xl" src="~assets/images/location-3.jpg" />
 
       <div class="text-center">

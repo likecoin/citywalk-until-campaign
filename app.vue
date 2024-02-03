@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed inset-0 black text-lime-900 font-serif">
+  <div class="fixed inset-0 black text-lime-900 font-sans tracking-wider">
     <div class="flex flex-col w-full h-full max-w-[768px] mx-auto bg-[#fef2e9] overflow-y-auto">
       <NuxtPage class="flex flex-col items-stretch grow" />
     </div>

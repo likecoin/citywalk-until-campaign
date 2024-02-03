@@ -3,7 +3,7 @@ export default defineAppConfig({
     primary: 'lime',
     gray: 'cool',
     button: {
-      font: 'font-bold',
+      font: 'font-display',
       variant: {
         link: 'underline',
       },

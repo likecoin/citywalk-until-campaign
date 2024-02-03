@@ -1,9 +1,9 @@
 <template>
   <div class="bg-[#ABAB8A] text-white">
 
-    <main class="flex flex-col justify-center grow gap-4 p-8 text-left">
+    <main class="flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
 
-      <h1 class="font-bold text-4xl ml-[-4px] mb-10">自然</h1>
+      <h1 class="font-bold text-6xl ml-[-4px] mb-4 font-serif">自然</h1>
 
       <h2 class="text-xl font-bold">散步學：如何欣賞地點一</h2>
 
