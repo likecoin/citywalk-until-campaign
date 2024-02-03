@@ -4,7 +4,8 @@
     :style="`background-image: url(${BackgroundImage})`"
   >
 
-    <main class="relative flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
+    <main class="relative flex flex-col justify-center items-start grow gap-4 p-8 pb-0 text-left">
+      <BackButton from="Location1Description" />
 
       <h1 class="font-bold text-6xl mb-4 font-serif">自然</h1>
 

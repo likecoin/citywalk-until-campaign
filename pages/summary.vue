@@ -17,14 +17,29 @@
 
       <PurchaseButton from="Summary" />
 
-      <UButton @click="onClickShare" size="xl" :to="{ name: 'share' }">分享</UButton>
+      <div class="flex gap-4">
+        <UButton @click="onClickBack" size="xl">返回</UButton>
+        <UButton
+          icon="i-heroicons-share-16-solid"
+          size="xl"
+          :to="{ name: 'share' }"
+          @click="onClickShare"
+        >分享</UButton>
+      </div>
     </footer>
 
   </div>
 </template>
 
 <script setup lang="ts">
+const router = useRouter()
+
 function onClickShare() {
   useTrackEvent('GoToShare')
+}
+
+function onClickBack() {
+  router.back()
+  useTrackEvent('ClickBackButtonInSummary')
 }
 </script>
