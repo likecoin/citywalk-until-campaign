@@ -118,17 +118,26 @@ function animateSplash() {
     ease: 'power2.out',
   }, 'dashed-lines+=1')
 
+  tl.addLabel('footer', '-=3')
+
   tl.from('footer', {
-    duration: 5,
+    duration: 2,
     opacity: 0,
-    top: '100%',
     ease: 'power2.out',
-  }, '-=3')
+  }, 'footer')
+
+  tl.from('footer > *', {
+    duration: 5,
+    y: 30,
+    opacity: 0,
+    stagger: 1,
+    ease: 'power2.out',
+  }, 'footer')
 
   tl.from('#splash', {
     duration: 10,
-    rotate: -35,
-    scale: 0.8,
+    rotate: -45,
+    scale: 0.75,
     transformOrigin: '50% 50%',
     ease: 'power2.out',
   }, '0')
