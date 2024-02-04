@@ -68,74 +68,76 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-  animateSplash()
+  animateSplash(3)
 })
 
-function animateSplash() {
+function animateSplash(playbackSpeed = 1) {
   const tl = $gsap.timeline()
+
+  const timeMultiplier = 1 / playbackSpeed
 
   tl.set('main', { opacity: 1 })
   tl.set('#street-blueprint', { opacity: 1 })
 
   tl.from('#street-blueprint > *', {
-    duration: 1,
+    duration: 1 * timeMultiplier,
     ease: 'power2.out',
     opacity: 0,
-    stagger: 0.25,
-  }, '+=1')
+    stagger: 0.25 * timeMultiplier,
+  }, `+=${1 * timeMultiplier}`)
 
   tl.from('#building-fill > *', {
-    duration: 1.5,
+    duration: 1.5 * timeMultiplier,
     ease: 'power2.out',
     opacity: 0,
-    stagger: 0.25,
-  }, '-=2')
+    stagger: 0.25 * timeMultiplier,
+  }, `-=${2 * timeMultiplier}`)
 
   tl.to('#street-blueprint', {
-    duration: 2,
+    duration: 2 * timeMultiplier,
     ease: 'power2.in',
     opacity: 0,
-  }, '-=2')
+  }, `-=${2 * timeMultiplier}`)
 
-  tl.addLabel('dashed-lines', '-=0.25')
+  tl.addLabel('dashed-lines', `-=${0.25 * timeMultiplier}`)
 
   tl.from('#dashed-lines', {
-    duration: 5,
+    duration: 5 * timeMultiplier,
     opacity: 0,
     ease: 'power2.out',
   }, 'dashed-lines')
 
   tl.from('#dashed-lines-clippath', {
-    duration: 5,
+    duration: 5 * timeMultiplier,
     x: '-100%',
     ease: 'power2.out',
   }, 'dashed-lines')
 
   tl.from('#title > path', {
-    duration: 1,
+    duration: 1 * timeMultiplier,
     opacity: 0,
-    stagger: 0.3,
+    stagger: 0.3 * timeMultiplier,
     ease: 'power2.out',
-  }, 'dashed-lines+=1')
+  }, `dashed-lines+=${1 * timeMultiplier}`)
 
-  tl.addLabel('footer', '-=3')
+  tl.addLabel('footer', `-=${3 * timeMultiplier}`)
 
   tl.from('footer', {
-    duration: 2,
+    duration: 2 * timeMultiplier,
     opacity: 0,
     ease: 'power2.out',
   }, 'footer')
 
   tl.from('footer > *', {
-    duration: 5,
+    duration: 5 * timeMultiplier,
     y: 30,
     opacity: 0,
-    stagger: 1,
+    stagger: 1 * timeMultiplier,
     ease: 'power2.out',
   }, 'footer')
 
   tl.from('#splash', {
-    duration: 10,
+    duration: 10 * timeMultiplier,
     rotate: -45,
     scale: 0.75,
     transformOrigin: '50% 50%',
