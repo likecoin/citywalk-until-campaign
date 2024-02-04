@@ -50,8 +50,27 @@
     </main>
 
     <footer class="flex flex-col items-center p-8">
-      <UButton @click="onClickRestart" size="xl" :to="{ name: 'index' }">再走一趟</UButton>
+      <UButton @click="onClickRestart" size="xl">再走一趟</UButton>
     </footer>
+
+    <UModal v-model="isRestartMenuOpen">
+      <UCard
+        :ui="{
+          header: { base: 'flex justify-between' },
+          body: { base: 'flex flex-col gap-4' },
+        }"
+      >
+        <template #header>
+          <span class="font-display">重新開始？</span>
+          <UButton @click="isRestartMenuOpen = false" variant="ghost" icon="i-heroicons-x-mark" />
+        </template>
+
+        <UButton @click="onClickRestartAtBeginning" size="xl" block :to="{ name: 'index' }">從頭開始</UButton>
+        <UButton @click="onClickRestartAtLocation1" size="xl" variant="outline" block :to="{ name: 'locations-1' }">從地點 1 開始</UButton>
+        <UButton @click="onClickRestartAtLocation2" size="xl" variant="outline" block :to="{ name: 'locations-2' }">從地點 2 開始</UButton>
+        <UButton @click="onClickRestartAtLocation3" size="xl" variant="outline" block :to="{ name: 'locations-3' }">從地點 3 開始</UButton>
+      </UCard>
+    </UModal>
 
   </div>
 </template>
@@ -61,6 +80,8 @@ const igAccounts = ['liker.land', 'until_coffee']
 const igTags = ['咖啡散步學', 'urbanstrollology', 'likerland']
 
 const toast = useToast()
+
+const isRestartMenuOpen = ref(false)
 
 function onClickIgAccount(id: string) {
   useTrackEvent(`ClickIgAccount${id}`)
@@ -81,6 +102,23 @@ function onClickCopy() {
 }
 
 function onClickRestart() {
+  isRestartMenuOpen.value = true
   useTrackEvent('RestartFromShare')
+}
+
+function onClickRestartAtBeginning() {
+  useTrackEvent('RestartFromShareAtBeginning')
+}
+
+function onClickRestartAtLocation1() {
+  useTrackEvent('RestartFromShareAtLocation1')
+}
+
+function onClickRestartAtLocation2() {
+  useTrackEvent('RestartFromShareAtLocation2')
+}
+
+function onClickRestartAtLocation3() {
+  useTrackEvent('RestartFromShareAtLocation3')
 }
 </script>
