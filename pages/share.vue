@@ -66,9 +66,14 @@
         </template>
 
         <UButton @click="onClickRestartAtBeginning" size="xl" block :to="{ name: 'index' }">從頭開始</UButton>
-        <UButton @click="onClickRestartAtLocation1" size="xl" variant="outline" block :to="{ name: 'locations-1' }">從地點 1 開始</UButton>
-        <UButton @click="onClickRestartAtLocation2" size="xl" variant="outline" block :to="{ name: 'locations-2' }">從地點 2 開始</UButton>
-        <UButton @click="onClickRestartAtLocation3" size="xl" variant="outline" block :to="{ name: 'locations-3' }">從地點 3 開始</UButton>
+        <UButton
+          v-for="i in 3"
+          :to="{ name: `locations-${i}` }"
+          variant="outline"
+          size="xl"
+          block
+          @click="onClickRestartAtLocation(i)"
+        >從地點 {{ i }} 開始</UButton>
       </UCard>
     </UModal>
 
@@ -110,15 +115,7 @@ function onClickRestartAtBeginning() {
   useTrackEvent('RestartFromShareAtBeginning')
 }
 
-function onClickRestartAtLocation1() {
-  useTrackEvent('RestartFromShareAtLocation1')
-}
-
-function onClickRestartAtLocation2() {
-  useTrackEvent('RestartFromShareAtLocation2')
-}
-
-function onClickRestartAtLocation3() {
-  useTrackEvent('RestartFromShareAtLocation3')
+function onClickRestartAtLocation(index: number) {
+  useTrackEvent(`RestartFromShareAtLocation${index}`)
 }
 </script>
