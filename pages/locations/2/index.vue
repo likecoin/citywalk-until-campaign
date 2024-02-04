@@ -8,7 +8,7 @@
     </header>
 
     <main class="flex flex-col justify-center items-center text-left grow gap-4 p-8 pb-0">
-      <img class="rounded-2xl" src="~assets/images/location-2.jpg" />
+      <img class="rounded-2xl w-full max-w-[40vh]" src="~assets/images/location-2.jpg" />
   
       <div class="text-center">
         <div class="font-bold text-lg">通道</div>
