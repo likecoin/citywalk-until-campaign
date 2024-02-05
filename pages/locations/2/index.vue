@@ -37,10 +37,10 @@
 
 <script setup lang="ts">
 function onClickMap() {
-  useTrackEvent('OpenMapLocation3')
+  useTrackEvent('OpenMapLocation2')
 }
 
 function onClickArrive() {
-  useTrackEvent('ArriveLocation3')
+  useTrackEvent('ArriveLocation2')
 }
 </script>
