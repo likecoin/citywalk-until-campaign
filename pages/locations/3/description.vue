@@ -19,7 +19,7 @@
     </main>
 
     <footer class="flex justify-between p-8">
-      <PurchaseButton from="Location3" />
+      <PurchaseButton from="Location3" :is-to-summary="true" />
 
       <UButton @click="onClickContinue" size="xl" :to="{ name: 'summary' }">繼續</UButton>
     </footer>
