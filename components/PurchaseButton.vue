@@ -4,6 +4,7 @@
     variant="soft"
     :target="props.isToSummary ? '_self' : '_blank'"
     :to="toRoute"
+    v-bind="$attrs"
     @click="onClickPurchase"
   >購買《城市散步學》</UButton>
 </template>

@@ -15,16 +15,18 @@
     </main>
 
     <footer class="flex flex-col items-center p-8 pt-0 gap-4">
-      <img class="w-[128px]" src="~assets/images/book.webp" />
+      <img class="w-[96px]" src="~assets/images/book.webp" />
+
+      <PurchaseButton from="Summary" />
 
       <div class="flex gap-4">
+        <RestartButton from="Summary" size="md" />
         <UButton
           icon="i-heroicons-share-16-solid"
-          size="xl"
+          size="md"
           :to="{ name: 'share' }"
           @click="onClickShare"
         >分享</UButton>
-        <PurchaseButton from="Summary" />
       </div>
     </footer>
 
