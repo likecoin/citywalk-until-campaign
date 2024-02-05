@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-[#ABAB8A] text-white">
+  <div class="relative bg-[#ABAB8A] text-white">
 
-    <main class="flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
+    <img class="absolute inset-0 opacity-50 -translate-y-1/4 pointer-events-none" src="~assets/images/location-2-bg.svg" />
+
+    <main class="relative flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
 
       <h1 class="font-bold text-6xl mb-4 font-serif">路徑</h1>
 

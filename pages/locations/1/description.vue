@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-[#ABAB8A] text-white">
+  <div class="relative bg-[#ABAB8A] text-white">
 
-    <main class="flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
+    <img class="absolute inset-0 opacity-50 pointer-events-none" src="~assets/images/location-1-bg.svg" />
+
+    <main class="relative flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
 
       <h1 class="font-bold text-6xl mb-4 font-serif">自然</h1>
 
