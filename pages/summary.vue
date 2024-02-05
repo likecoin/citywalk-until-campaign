@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#ABAB8A] text-white pt-8">
 
-    <BackButton class="absolute top-8 left-8" from="Summary" @click="onClickBack" />
+    <BackButton class="absolute top-8 left-8" from="Summary" />
 
     <main class="flex flex-col justify-center items-center grow gap-4 p-8 text-left">
 
@@ -32,14 +32,7 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter()
-
 function onClickShare() {
   useTrackEvent('GoToShare')
-}
-
-function onClickBack() {
-  router.back()
-  useTrackEvent('ClickBackButtonInSummary')
 }
 </script>
