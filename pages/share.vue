@@ -49,7 +49,7 @@
     </main>
 
     <footer class="flex flex-col items-center p-8">
-      <UButton @click="onClickRestart" size="xl" :to="{ name: 'index' }">重新開始</UButton>
+      <UButton @click="onClickRestart" size="xl" :to="{ name: 'index' }">再走一趟</UButton>
     </footer>
 
   </div>
