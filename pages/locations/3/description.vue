@@ -1,11 +1,12 @@
 <template>
-    <div
-      class="relative bg-[#ABAB8A] text-white bg-cover"
-      :style="`background-image: url(${BackgroundImage})`"
-    >
+  <div
+    class="relative pt-8 bg-[#ABAB8A] text-white bg-cover"
+    :style="`background-image: url(${BackgroundImage})`"
+  >
+
+    <BackButton class="absolute top-8 left-8" from="Location3Description" />
 
     <main class="relative flex flex-col justify-center items-start grow gap-4 p-8 pt-4 pb-0 text-left">
-      <BackButton from="Location3Description" />
 
       <h1 class="font-bold text-6xl mb-4 font-serif">空間</h1>
 

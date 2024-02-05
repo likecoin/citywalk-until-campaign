@@ -3,7 +3,7 @@
     size="xs"
     icon="i-heroicons-arrow-left-16-solid"
     variant="soft"
-    :ui="{ rounded: 'rounded-full' }"
+    :ui="{ base: 'z-[2]', rounded: 'rounded-full' }"
     @click="onClickBack"
   />
 </template>

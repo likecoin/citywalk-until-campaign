@@ -1,8 +1,9 @@
 <template>
   <div class="bg-[#ABAB8A] text-white">
 
+    <BackButton class="absolute top-8 left-8" from="Share" />
+
     <main class="flex flex-col justify-center items-start grow gap-4 p-8 text-left">
-      <BackButton from="Share" />
 
       <p class="mb-8 text-4xl font-cursive">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 

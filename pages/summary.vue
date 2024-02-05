@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-[#ABAB8A] text-white">
+  <div class="bg-[#ABAB8A] text-white pt-8">
+
+    <BackButton class="absolute top-8 left-8" from="Summary" @click="onClickBack" />
 
     <main class="flex flex-col justify-center items-center grow gap-4 p-8 text-left">
 
@@ -13,18 +15,16 @@
     </main>
 
     <footer class="flex flex-col items-center p-8 pt-0 gap-4">
-      <img class="w-[96px]" src="~assets/images/book.webp" />
-
-      <PurchaseButton from="Summary" />
+      <img class="w-[128px]" src="~assets/images/book.webp" />
 
       <div class="flex gap-4">
-        <UButton @click="onClickBack" size="xl">返回</UButton>
         <UButton
           icon="i-heroicons-share-16-solid"
           size="xl"
           :to="{ name: 'share' }"
           @click="onClickShare"
         >分享</UButton>
+        <PurchaseButton from="Summary" />
       </div>
     </footer>
 
