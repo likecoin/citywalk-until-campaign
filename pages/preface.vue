@@ -13,7 +13,7 @@
     </div>
 
     <footer class="flex justify-center p-8">
-      <UButton @click="onClickStart" size="xl" :to="{ name: 'locations-1' }">開始</UButton>
+      <UButton @click="onClickStart" size="xl" :to="{ name: 'locations-1' }">出發</UButton>
     </footer>
 
   </main>
