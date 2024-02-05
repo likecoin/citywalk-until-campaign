@@ -1,7 +1,8 @@
 <template>
-  <div class="relative bg-[#ABAB8A] text-white">
-
-    <img class="absolute inset-0 opacity-50 pointer-events-none" src="~assets/images/location-1-bg.svg" />
+  <div
+    class="relative bg-[#ABAB8A] text-white bg-cover"
+    :style="`background-image: url(${BackgroundImage})`"
+  >
 
     <main class="relative flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
 
@@ -24,6 +25,8 @@
 </template>
 
 <script setup lang="ts">
+import BackgroundImage from '~/assets/images/location-1-bg.svg'
+
 function onClickContinue() {
   useTrackEvent('CompleteLocation1')
 }
