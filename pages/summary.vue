@@ -7,7 +7,7 @@
 
       <p class="text-xl font-bold text-center font-serif">建築．路徑．空間</p>
       <p class="text-xl font-bold text-center font-serif">物件．信息．自然</p>
-      <p class="mt-4">在日常中觀察，深入認識身居其中的城市，繼而喜歡上自己生活的這個地方</p>
+      <p class="mt-4">在日常中觀察，深入認識身居其中的城市，繼而喜歡上自己生活的這個地方。</p>
       <p>城市散步學，學習如何在城市中散步，與香港重新建立深刻的關係。</p>
 
     </main>
