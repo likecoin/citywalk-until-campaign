@@ -1,11 +1,11 @@
 <template>
   <div
-    class="relative bg-[#ABAB8A] text-white bg-cover"
+    class="relative pt-8 bg-[#ABAB8A] text-white bg-cover"
     :style="`background-image: url(${BackgroundImage})`"
   >
     <BackButton class="absolute top-8 left-8" from="Location2Description" />
     
-    <main class="relative flex flex-col justify-center items-start grow gap-4 p-8 pt-4 pb-0 text-left">
+    <main class="relative flex flex-col justify-center items-start grow gap-4 p-8 pb-0 text-left">
 
       <h1 class="font-bold text-6xl mb-4 font-serif">路徑</h1>
 
