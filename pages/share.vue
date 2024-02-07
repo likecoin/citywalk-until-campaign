@@ -5,6 +5,10 @@
 
       <p class="mb-8 text-4xl font-cursive">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
 
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img class="w-[50px]" src="~assets/images/instagram.svg" alt="Instagram" />
+      </a>
+
       <ul class="font-mono">
         <li v-for="(id, index) in igAccounts" :key="id" class="inline">
           <template v-if="index > 0">&nbsp;</template>
