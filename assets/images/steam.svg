@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1125 768">
+  <defs>
+    <linearGradient id="steam-gradient" x1="562.27" y1="143.94" x2="562.51" y2="741.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".6"/>
+    </linearGradient>
+  </defs>
+  <path d="M1125,768v-87.32c-27.37-9.95,10.98-91.87-108.98-128.69-213.57-65.55-106.78-71.7-151.6-160.84-28.76-57.19-186.81-75.5-301.92-104.75-126.28-32.1,79.39-200.61,38.28-201.42-55.37-1.1-249.63,124.28-279.23,210.31-50.32,146.25,142.49,97.38,84.14,177.25-76.46,104.64-313.74-3.88-405.68,213.16v82.3c161.16-45.64,354.54-72.24,562.5-72.24s401.34,26.6,562.5,72.24Z" fill="url(#steam-gradient)" stroke-width="0"/>
+</svg>
