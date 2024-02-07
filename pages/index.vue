@@ -1,6 +1,14 @@
 <template>
   <main class="relative overflow-hidden" style="opacity: 0">
 
+    <UButton
+      id="skip-button"
+      class="absolute z-[2] top-4 right-4"
+      label="略過"
+      :ui="{ rounded: 'rounded-full' }"
+      @click="onClickSkip"
+    />
+
     <div class="absolute inset-x-0 top-1/2 translate-y-[-50%]">    
       <div class="relative">
         <div class="absolute inset-x-0 top-0 min-h-[5vh] bg-gradient-to-b from-[#fef2e9]" />
@@ -68,84 +76,103 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-  animateSplash(3)
+  animateSplash({ timeScale: 3 })
 })
 
-function animateSplash(playbackSpeed = 1) {
-  const tl = $gsap.timeline()
+const animationTimeline = ref<GSAPTimeline>()
 
-  const timeMultiplier = 1 / playbackSpeed
+function animateSplash({ timeScale = 1 } = {}) {
+  const tl = $gsap.timeline({
+    onComplete: () => {
+      useTrackEvent('AnimationComplete')
+    },
+  })
+
+  tl.timeScale(timeScale)
 
   tl.set('main', { opacity: 1 })
+  tl.set('#skip-button', { opacity: 1 })
   tl.set('#street-blueprint', { opacity: 1 })
 
   tl.from('#street-blueprint > *', {
-    duration: 1 * timeMultiplier,
+    duration: 1,
     ease: 'power2.out',
     opacity: 0,
-    stagger: 0.25 * timeMultiplier,
-  }, `+=${1 * timeMultiplier}`)
+    stagger: 0.25,
+  }, '+=1')
 
   tl.from('#building-fill > *', {
-    duration: 1.5 * timeMultiplier,
+    duration: 1.5,
     ease: 'power2.out',
     opacity: 0,
-    stagger: 0.25 * timeMultiplier,
-  }, `-=${2 * timeMultiplier}`)
+    stagger: 0.25,
+  }, '-=2')
 
   tl.to('#street-blueprint', {
-    duration: 2 * timeMultiplier,
+    duration: 2,
     ease: 'power2.in',
     opacity: 0,
-  }, `-=${2 * timeMultiplier}`)
+  }, '-=2')
 
-  tl.addLabel('dashed-lines', `-=${0.25 * timeMultiplier}`)
+  tl.addLabel('title', '-=0.25')
+
+  tl.to('#skip-button', {
+    duration: 0.5,
+    opacity: 0,
+  })
 
   tl.from('#dashed-lines', {
-    duration: 5 * timeMultiplier,
+    duration: 5,
     opacity: 0,
     ease: 'power2.out',
-  }, 'dashed-lines')
+  }, 'title')
 
   tl.from('#dashed-lines-clippath', {
-    duration: 5 * timeMultiplier,
+    duration: 5,
     x: '-100%',
     ease: 'power2.out',
-  }, 'dashed-lines')
+  }, 'title')
 
   tl.from('#title > path', {
-    duration: 1 * timeMultiplier,
+    duration: 1,
     opacity: 0,
-    stagger: 0.3 * timeMultiplier,
+    stagger: 0.3,
     ease: 'power2.out',
-  }, `dashed-lines+=${1 * timeMultiplier}`)
+  }, 'title+=1')
 
-  tl.addLabel('footer', `-=${3 * timeMultiplier}`)
+  tl.addLabel('footer', '-=3')
 
   tl.from('footer', {
-    duration: 2 * timeMultiplier,
+    duration: 2,
     opacity: 0,
     ease: 'power2.out',
   }, 'footer')
 
   tl.from('footer > *', {
-    duration: 5 * timeMultiplier,
+    duration: 5,
     y: 30,
     opacity: 0,
-    stagger: 1 * timeMultiplier,
+    stagger: 1,
     ease: 'power2.out',
   }, 'footer')
 
   tl.from('#splash', {
-    duration: 10 * timeMultiplier,
+    duration: 10,
     rotate: -45,
     scale: 0.75,
     transformOrigin: '50% 50%',
     ease: 'power2.out',
   }, '0')
+
+  animationTimeline.value = tl
 }
 
 function onClickStart() {
   useTrackEvent('ClickStart')
+}
+
+function onClickSkip() {
+  animationTimeline.value?.play('dashed-lines')
+  useTrackEvent('ClickSkipAnimation')
 }
 </script>
