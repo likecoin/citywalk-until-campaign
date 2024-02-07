@@ -19,13 +19,13 @@
 
       <UButton @click="onClickRestartAtBeginning" size="xl" block :to="{ name: 'index' }">從頭開始</UButton>
       <UButton
-        v-for="i in 3"
-        :to="{ name: `locations-${i}` }"
+        v-for="(location, i) in locations"
+        :to="{ name: `locations-${i + 1}` }"
         variant="outline"
         size="xl"
         block
-        @click="onClickRestartAtLocation(i)"
-      >從地點 {{ i }} 開始</UButton>
+        @click="onClickRestartAtLocation(i + 1)"
+      >從地點 {{ i + 1 }} - {{ location }}開始</UButton>
     </UCard>
   </UModal>
 </template>
@@ -39,6 +39,12 @@ const props = defineProps({
     default: '',
   }
 })
+
+const locations = [
+  '山頂亭',
+  '通道',
+  '遊樂場',
+]
 
 function onClick() {
   isRestartMenuOpen.value = true
