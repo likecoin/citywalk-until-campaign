@@ -50,9 +50,9 @@
 
     </main>
 
-    <footer class="flex flex-row justify-center gap-4 p-8">
-      <RestartButton from="Share" />
-      <PurchaseButton from="Share" />
+    <footer class="flex flex-col items-center gap-4 p-8">
+      <PurchaseButton from="Share" block />
+      <RestartButton from="Share" size="md" block />
     </footer>
   </div>
 </template>
