@@ -1,9 +1,11 @@
 <template>
   <div>
 
-    <header class="p-8 bg-[#ABAB8A] text-center text-white">
-      <h1 class="flex justify-between tracking-widest">
-        <span class="text-2xl font-cursive">地點 2</span><span class="text-3xl font-bold font-serif">路徑</span>
+    <header class="flex items-center gap-4 p-8 bg-[#ABAB8A] text-center text-white">
+      <BackButton from="Location2" />
+
+      <h1 class="flex justify-between tracking-widest grow">
+        <span class="text-3xl font-cursive">地點 2</span><span class="text-3xl font-bold font-serif">路徑</span>
       </h1>
     </header>
 

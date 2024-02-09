@@ -1,10 +1,12 @@
 <template>
   <div
-    class="relative bg-[#ABAB8A] text-white bg-cover"
+    class="bg-[#ABAB8A] text-white pt-8 bg-cover"
     :style="`background-image: url(${BackgroundImage})`"
   >
 
-    <main class="relative flex flex-col justify-center grow gap-4 p-8 pb-0 text-left">
+    <BackButton class="absolute top-8 left-8" from="Location1Description" />
+
+    <main class="relative flex flex-col justify-center items-start grow gap-4 p-8 pb-0 text-left">
 
       <h1 class="font-bold text-6xl mb-4 font-serif">自然</h1>
 
@@ -16,7 +18,7 @@
     </main>
 
     <footer class="flex justify-between p-8">
-      <PurchaseButton from="Location1" />
+      <PurchaseButton from="Location1" :is-to-summary="true" />
 
       <UButton @click="onClickContinue" size="xl" :to="{ name: 'locations-2' }">繼續</UButton>
     </footer>

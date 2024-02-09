@@ -1,6 +1,8 @@
 <template>
   <div class="bg-[#ABAB8A] text-white">
 
+    <BackButton class="absolute top-8 left-8" from="Share" />
+
     <main class="flex flex-col justify-center items-start grow gap-4 p-8 text-left">
 
       <p class="mb-8 text-4xl font-cursive">和我們分享你的散步學體驗。看看其他人在散步時看到什麼。</p>
@@ -52,10 +54,10 @@
 
     </main>
 
-    <footer class="flex flex-col items-center p-8">
-      <UButton @click="onClickRestart" size="xl" :to="{ name: 'index' }">再走一趟</UButton>
+    <footer class="flex flex-col items-center gap-4 p-8">
+      <PurchaseButton from="Share" block />
+      <RestartButton from="Share" size="md" block />
     </footer>
-
   </div>
 </template>
 
@@ -81,9 +83,5 @@ function onClickCopy() {
   } catch {
     toast.add({ title: '複製失敗' })
   }
-}
-
-function onClickRestart() {
-  useTrackEvent('RestartFromShare')
 }
 </script>
