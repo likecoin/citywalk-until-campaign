@@ -1,9 +1,10 @@
 <template>
   <UButton
+    icon="i-heroicons-arrow-uturn-left-16-solid"
     size="xl"
     v-bind="$attrs"
     @click="onClick"
-  >再走一趟</UButton>
+  />
 
   <UModal v-model="isRestartMenuOpen">
     <UCard

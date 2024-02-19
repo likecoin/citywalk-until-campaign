@@ -54,9 +54,14 @@
 
     </main>
 
-    <footer class="flex flex-col items-center gap-4 p-8">
+    <footer class="flex flex-col gap-4 p-8">
       <PurchaseButton from="Share" block />
-      <RestartButton from="Share" size="md" block />
+  
+      <div class="grid grid-cols-5 gap-4">
+        <RestartButton from="Share" size="md" block />
+
+        <SubscribeButton class="col-span-4" from="Share" size="md" block />
+      </div>
     </footer>
   </div>
 </template>
