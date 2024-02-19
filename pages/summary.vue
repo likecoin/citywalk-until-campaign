@@ -19,8 +19,9 @@
 
       <PurchaseButton from="Summary" block />
 
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-3 gap-4">
         <RestartButton from="Summary" size="md" block />
+  
         <UButton
           icon="i-heroicons-share-16-solid"
           size="md"
@@ -28,6 +29,8 @@
           block
           @click="onClickShare"
         >分享</UButton>
+
+        <SubscribeButton from="Summary" size="md" block />
       </div>
     </footer>
 
