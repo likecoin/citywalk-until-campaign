@@ -57,10 +57,10 @@
     <footer class="flex flex-col gap-4 p-8">
       <PurchaseButton from="Share" block />
   
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-5 gap-4">
         <RestartButton from="Share" size="md" block />
 
-        <SubscribeButton from="Share" size="md" block />
+        <SubscribeButton class="col-span-4" from="Share" size="md" block />
       </div>
     </footer>
   </div>
