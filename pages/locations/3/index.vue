@@ -21,7 +21,7 @@
         </div>
 
         <UButton
-          to="https://www.google.com/maps/dir/Until+coffee,+%E9%91%BD%E7%9F%B3%E5%B1%B1/%E6%96%B0%E8%92%B2%E5%B4%97%E5%B4%87%E9%BD%A1%E8%A1%97%E5%B4%87%E9%BD%A1%E8%A1%97%E9%81%8A%E6%A8%82%E5%A0%B4/@22.3355745,114.1964057,17z/data=!4m14!4m13!1m5!1m1!1s0x3404075cb192b285:0xe5753b37e7c71d12!2m2!1d114.1981629!2d22.338325!1m5!1m1!1s0x340406d7204ef985:0x9f893d74ded46ecc!2m2!1d114.1964057!2d22.3355745!3e2?entry=ttu"
+          to="https://maps.app.goo.gl/LkPrSCL1SswYxUny8"
           variant="outline"
           size="xl"
           color="black"
