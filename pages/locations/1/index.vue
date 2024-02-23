@@ -21,7 +21,7 @@
         </div>
   
         <UButton
-          to="https://maps.app.goo.gl/znjVCqha7GH8vGm88"
+          to="https://maps.app.goo.gl/8DwTPFDWaBqn5qDy7"
           variant="outline"
           size="xl"
           color="black"
